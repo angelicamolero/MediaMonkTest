@@ -1,0 +1,145 @@
+@font-face {
+  font-family: "klavika";
+  src: url("../font/klavika-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "klavika-light";
+  src: url("../font/klavika-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+    margin: 0;
+    font-family: klavika-light,sans-serif;
+    overflow: hidden;
+}
+
+.slider {
+  margin: auto;
+  height: 100vh;
+  min-height: 400px;
+  background-image: url('../images/background.jpg');
+  background-position: 0%;
+  background-size:cover;
+  background-repeat: no-repeat;
+  animation: slide-in 2s forwards;
+  animation-iteration-count: 1;
+}
+
+.inside_slide {
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.headline {
+    width: 470px;
+}
+.headline h1 {
+    text-transform: uppercase;
+    display: inline;
+    border-bottom:  1px solid white;
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    left: 30px;
+    top: 50px;
+    position: relative;
+    animation: slide-down 1s;
+    animation-iteration-count: 1;
+}
+
+.inside_slide .small-text {
+    color: white;
+    font-size: 12px;
+    text-align: left;
+    font-weight: 100;
+    position: absolute;
+    left: 30px;
+    top: 500px;
+    font-size: 12px;
+}
+
+.logo {
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    position: absolute;
+    right: 0;
+    padding: 20px;
+    bottom: -10px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+table {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+table, td {
+    border: 2px dotted white;
+    color: white;
+    border-collapse: collapse;
+}
+
+.celda {
+    text-align: center;
+    width: 13px;
+    height: 13px;
+    font-size: 15px;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    padding-bottom: 3px;
+    margin: -3px 3px 0 3px;
+}
+
+.active-celda {
+    background-color: white;
+}
+
+/* Next & previous buttons */
+.previous, .next {
+  display: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 70px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+    
+}
+
+.next {
+	right: 0;
+    display: block;
+}
+
+/* Animations */
+.fade {
+    animation: slide-in 0.5s forwards;
+    -webkit-animation: slide-in 0.5s forwards;
+}
+
+@keyframes slide-down {
+  from {top: 0px;}
+  to {top: 50px;}
+}
+
+@keyframes slide-in {
+0% {transform: translateX(100%);}
+}
+
